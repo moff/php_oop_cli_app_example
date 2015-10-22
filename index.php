@@ -11,8 +11,6 @@ $patientSue->chooseDoctor($doctorJohn);
 
 $examinations = [];
 
-$bloodSugarExamination = new \Src\Examination\BloodGlucoseLevel();
-
 $examinations[] = $doctorJohn->scheduleExamination(new \Src\Examination\BloodGlucoseLevel(), $patientSue, (new \DateTime())->modify('+' . rand(3, 12) . ' hours'));
 $examinations[] = $doctorJohn->scheduleExamination(new \Src\Examination\BloodPressure(), $patientSue, (new \DateTime())->modify('+' . rand(3, 12) . ' hours'));
 
